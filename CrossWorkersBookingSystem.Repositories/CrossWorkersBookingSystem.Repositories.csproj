@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrossWorkersBookingSystem.Data\CrossWorkersBookingSystem.Data.csproj" />
+    <ProjectReference Include="..\CrossWorkersBookingSystem.Models\CrossWorkersBookingSystem.Models.csproj" />
+  </ItemGroup>
+
+</Project>
