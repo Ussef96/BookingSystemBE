@@ -58,6 +58,11 @@ namespace CrossWorkersBookingSystem.Data.Migrations
                 columns: new[] { "Id", "Name", "Quantity" },
                 values: new object[] { 3, "The Great Gatsby", 4 });
 
+            migrationBuilder.InsertData(
+                table: "Booking",
+                columns: new[] { "Id", "BookedQuantity", "DateFrom", "DateTo", "ResourceId" },
+                values: new object[] { 1, 2, new DateTime(2021, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), 3 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Booking_ResourceId",
                 table: "Booking",

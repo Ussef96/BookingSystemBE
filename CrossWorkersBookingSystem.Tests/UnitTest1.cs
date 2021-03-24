@@ -37,5 +37,19 @@ namespace CrossWorkersBookingSystem.Tests
             var result = _bookService.ValidateBook(booking);
             Assert.IsTrue(result == false);
         }
+        [Test]
+        public void TestValidateBookWithDates1()
+        {
+            Booking booking = new Booking { ResourceId = 3, DateFrom = new System.DateTime(2021, 04, 08), DateTo = new System.DateTime(2021, 04, 10), BookedQuantity = 3 };
+            var result = _bookService.ValidateBook(booking);
+            Assert.IsTrue(result == false);
+        }
+        [Test]
+        public void TestValidateBookWithDates2()
+        {
+            Booking booking = new Booking { ResourceId = 3, DateFrom = new System.DateTime(2021, 04, 09), DateTo = new System.DateTime(2021, 04, 11), BookedQuantity = 2 };
+            var result = _bookService.ValidateBook(booking);
+            Assert.IsTrue(result == true);
+        }
     }
 }

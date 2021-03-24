@@ -44,6 +44,16 @@ namespace CrossWorkersBookingSystem.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Booking");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BookedQuantity = 2,
+                            DateFrom = new DateTime(2021, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateTo = new DateTime(2021, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ResourceId = 3
+                        });
                 });
 
             modelBuilder.Entity("CrossWorkersBookingSystem.Models.Models.Resource", b =>

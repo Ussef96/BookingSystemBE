@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrossWorkersBookingSystem.Data.Migrations
 {
     [DbContext(typeof(BookingContext))]
-    [Migration("20210323205234_modelsCreation")]
+    [Migration("20210324104141_modelsCreation")]
     partial class modelsCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,6 +46,16 @@ namespace CrossWorkersBookingSystem.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Booking");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BookedQuantity = 2,
+                            DateFrom = new DateTime(2021, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateTo = new DateTime(2021, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ResourceId = 3
+                        });
                 });
 
             modelBuilder.Entity("CrossWorkersBookingSystem.Models.Models.Resource", b =>
