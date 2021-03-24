@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "95b200f8-0514-485d-b160-cc25b87468fd",
+		"name": "CrossWorkersBooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44336/api/booking/books",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44336",
+					"path": [
+						"api",
+						"booking",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidateBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DateFrom\" : \"2021-03-01\",\r\n    \"DateTo\" : \"2021-04-01\",\r\n    \"BookedQuantity\" : \"5\",\r\n    \"ResourceId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44336/api/booking/Reserve",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44336",
+					"path": [
+						"api",
+						"booking",
+						"Reserve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
