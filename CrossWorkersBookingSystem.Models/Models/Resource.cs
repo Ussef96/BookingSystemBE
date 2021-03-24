@@ -17,6 +17,7 @@ namespace CrossWorkersBookingSystem.Models.Models
 
         public int Quantity { get; set; }
 
-        public virtual Booking Booking { get; set; }
+
+        public virtual ICollection<Booking> Booking { get; set; }
     }
 }

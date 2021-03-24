@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrossWorkersBookingSystem.Data.Migrations
 {
     [DbContext(typeof(BookingContext))]
-    [Migration("20210324104141_modelsCreation")]
+    [Migration("20210324133734_modelsCreation")]
     partial class modelsCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,8 +42,7 @@ namespace CrossWorkersBookingSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ResourceId")
-                        .IsUnique();
+                    b.HasIndex("ResourceId");
 
                     b.ToTable("Booking");
 
@@ -99,8 +98,8 @@ namespace CrossWorkersBookingSystem.Data.Migrations
             modelBuilder.Entity("CrossWorkersBookingSystem.Models.Models.Booking", b =>
                 {
                     b.HasOne("CrossWorkersBookingSystem.Models.Models.Resource", "Resource")
-                        .WithOne("Booking")
-                        .HasForeignKey("CrossWorkersBookingSystem.Models.Models.Booking", "ResourceId")
+                        .WithMany("Booking")
+                        .HasForeignKey("ResourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

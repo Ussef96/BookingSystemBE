@@ -20,9 +20,10 @@ namespace CrossWorkersBookingSystem.Models.Models
 
         public int BookedQuantity { get; set; }
 
+
         public int ResourceId { get; set; }
 
-        [JsonIgnore]
+        [ForeignKey("ResourceId")]
         public virtual Resource Resource { get; set; }
 
     }

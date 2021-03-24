@@ -32,7 +32,7 @@ namespace CrossWorkersBookingSystem.Repositories
         }
         public void Commit()
         {
-            _bookingContext.SaveChangesAsync();
+            _bookingContext.SaveChanges();
         }
 
 

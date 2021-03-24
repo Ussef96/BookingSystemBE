@@ -40,8 +40,7 @@ namespace CrossWorkersBookingSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ResourceId")
-                        .IsUnique();
+                    b.HasIndex("ResourceId");
 
                     b.ToTable("Booking");
 
@@ -97,8 +96,8 @@ namespace CrossWorkersBookingSystem.Data.Migrations
             modelBuilder.Entity("CrossWorkersBookingSystem.Models.Models.Booking", b =>
                 {
                     b.HasOne("CrossWorkersBookingSystem.Models.Models.Resource", "Resource")
-                        .WithOne("Booking")
-                        .HasForeignKey("CrossWorkersBookingSystem.Models.Models.Booking", "ResourceId")
+                        .WithMany("Booking")
+                        .HasForeignKey("ResourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

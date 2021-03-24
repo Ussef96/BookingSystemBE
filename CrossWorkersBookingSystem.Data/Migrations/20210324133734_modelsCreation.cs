@@ -66,8 +66,7 @@ namespace CrossWorkersBookingSystem.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Booking_ResourceId",
                 table: "Booking",
-                column: "ResourceId",
-                unique: true);
+                column: "ResourceId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
