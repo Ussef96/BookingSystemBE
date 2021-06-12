@@ -1,7 +1,7 @@
 # Instructions
 
 1-Make sure that Backend is running on port 44336
-2-Open visual studio -> package manager console -> use CrossWorkerBookingSystem.Data -> run command update-database
+2-Open visual studio -> package manager console -> use BookingSystem.Data -> run command update-database
 3-run test cases before using UI, I have applied ef core seeding for sample data.
 4-You can reserve books from UI and new records can be added in SQL database
 ( either from Sql server managment studio or from server explorer )
