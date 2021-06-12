@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CrossWorkersBookingSystem.Services\CrossWorkersBookingSystem.Services.csproj" />
+    <ProjectReference Include="..\BookingSystem.Services\BookingSystem.Services.csproj" />
   </ItemGroup>
 
 </Project>
